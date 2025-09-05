@@ -174,10 +174,26 @@ public class lista1 {
     }
 
     public static void questao10(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int num1 = input.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        int num2 = input.nextInt();
+
+        System.out.printf("\n%d é igual a %d? %b", num1, num2, (num1 == num2));
+        System.out.printf("\n%d é diferente de %d? %b", num1, num2, (num1 != num2));
+        System.out.printf("\n%d é maior que %d? %b", num1, num2, (num1 > num2));
+        System.out.printf("\n%d é menor que %d? %b", num1, num2, (num1 < num2));
+        System.out.printf("\n%d é maior ou igual a %d? %b", num1, num2, (num1 >= num2));
+        System.out.printf("\n%d é menor ou igual a %d? %b", num1, num2, (num1 <= num2));
+
+        input.close();
         
     }
 
     public static void main(String[] args) {
-        questao9();
+        questao10();
     }
 }
