@@ -132,7 +132,17 @@ public class lista1 {
     }
 
     public static void questao8(){
-        
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite a medida do raio da lata (em cm): ");
+        float radius = input.nextFloat();
+
+        System.out.print("Digite a medida da altura da lata (em cm): ");
+        float height = input.nextFloat();
+
+        System.out.printf("\nO volume da lata de óleo é de aproximadamente %.2f cm quadrados.", (3.14159 * (radius * radius) * height));
+
+        input.close();
     }
 
     public static void questao9(){
@@ -144,6 +154,6 @@ public class lista1 {
     }
 
     public static void main(String[] args) {
-        questao7();
+        questao8();
     }
 }
