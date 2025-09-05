@@ -86,6 +86,7 @@ public class lista1 {
     }
 
     public static void questao5(){
+
         Scanner input = new Scanner(System.in);
 
         System.out.print("\nQual foi o tempo de viagem? (em horas) ");
@@ -106,7 +107,35 @@ public class lista1 {
         input.close();
     }
 
+    public static void questao6(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Qual é a temperatura atual (em ºC)? ");
+        float temp = input.nextFloat();
+
+        System.out.printf("\nA temperatura em Fahrenheit é de %.2f ºF.", ((9 * temp + 160) / 5));
+
+        input.close();
+
+    }
+
+    public static void questao7(){
+        
+    }
+
+    public static void questao8(){
+        
+    }
+
+    public static void questao9(){
+        
+    }
+
+    public static void questao10(){
+        
+    }
+
     public static void main(String[] args) {
-        questao5();
+        questao6();
     }
 }
