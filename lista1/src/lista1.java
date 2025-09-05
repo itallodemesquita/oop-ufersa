@@ -85,7 +85,28 @@ public class lista1 {
         input.close();
     }
 
+    public static void questao5(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("\nQual foi o tempo de viagem? (em horas) ");
+        float tempo = input.nextFloat();
+
+        System.out.print("Qual foi a velocidade média na viagem? (em km/h) ");
+        float velocidade = input.nextFloat();
+
+        float distancia = tempo * velocidade;
+
+        float litros = distancia / 12;
+
+        System.out.printf("\nVelocidade média: %.2f km/h\n", velocidade);
+        System.out.printf("Tempo de viagem: %.2f horas.\n", tempo);
+        System.out.printf("Distância total: %.2f km.\n", distancia);
+        System.out.printf("Combustível gasto: %.2f L. \n", litros);
+
+        input.close();
+    }
+
     public static void main(String[] args) {
-        questao4();
+        questao5();
     }
 }
