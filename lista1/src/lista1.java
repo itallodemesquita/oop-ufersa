@@ -58,7 +58,34 @@ public class lista1 {
         input.close();
     }
 
+    public static void questao4(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("\nDigite o primeiro valor: ");
+        int varA = input.nextInt();
+
+        System.out.print("Digite o segundo valor: ");
+        int varB = input.nextInt();
+
+        System.out.print("Digite o terceiro valor: ");
+        int varC = input.nextInt();
+
+        System.out.print("Digite o último valor: ");
+        int varD = input.nextInt();
+
+
+        System.out.printf("\nA + B = %d. A * B = %d\n", (varA + varB), (varA * varB));
+        System.out.printf("A + C = %d. A * C = %d\n", (varA + varC), (varA * varC));
+        System.out.printf("A + D = %d. A * D = %d\n", (varA + varD), (varA * varD));
+        System.out.printf("B + C = %d. B * C = %d\n", (varB + varC), (varB * varC));
+        System.out.printf("B + D = %d. B * D = %d\n", (varB + varD), (varB * varD));
+        System.out.printf("C + D = %d. C * D = %d\n", (varC + varD), (varC * varD));
+        
+
+        input.close();
+    }
+
     public static void main(String[] args) {
-        questao3();
+        questao4();
     }
 }
