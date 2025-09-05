@@ -120,6 +120,14 @@ public class lista1 {
     }
 
     public static void questao7(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Qual é a temperatura atual (em ºF)? ");
+        float temp = input.nextFloat();
+
+        System.out.printf("\nA temperatura em Celsius é de %.2f ºC.", ((temp - 32) * 5 / 9));
+
+        input.close();
         
     }
 
@@ -136,6 +144,6 @@ public class lista1 {
     }
 
     public static void main(String[] args) {
-        questao6();
+        questao7();
     }
 }
