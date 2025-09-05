@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+/* Quick copy and paste
+
+    Scanner input = new Scanner(System.in);
+
+    input.close();
+
+ */
+
 public class lista1 {
 
     public static void questao1(){
@@ -146,7 +154,23 @@ public class lista1 {
     }
 
     public static void questao9(){
-        
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Você tem quantos anos? ");
+        int anos = input.nextInt();
+        int idadeDias = (anos * 365);
+
+        System.out.print("...e quantos meses? ");
+        int meses = input.nextInt();
+        idadeDias = idadeDias + (meses * 30);
+
+        System.out.print("...e quantos dias de vida? ");
+        int dias = input.nextInt();
+        idadeDias = idadeDias + dias;
+
+        System.out.printf("\nVocê já viveu o total de %d dias de vida!", idadeDias);
+
+        input.close();
     }
 
     public static void questao10(){
@@ -154,6 +178,6 @@ public class lista1 {
     }
 
     public static void main(String[] args) {
-        questao8();
+        questao9();
     }
 }
