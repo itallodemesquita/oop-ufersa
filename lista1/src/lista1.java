@@ -225,7 +225,19 @@ public class lista1 {
     }
 
     public static void questaoc2(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("\nDigite um número inteiro: ");
+        int num = input.nextInt();
+
+        if (num >= 0) {
+            System.out.printf("\nO módulo do número %d é %d", num, num);
+        } else {
+            int modulus = num * (-1);
+            System.out.printf("\nO módulo do número %d é %d", num, modulus);
+        }
+
+        input.close();
     }
 
     public static void questaoc3(){
