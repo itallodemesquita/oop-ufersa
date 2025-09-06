@@ -193,7 +193,82 @@ public class lista1 {
         
     }
 
+    public static void questaoc1(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("\nDigite um número inteiro (A): ");
+        int nA = input.nextInt();
+
+        System.out.print("Digite um número inteiro (B): ");
+        int nB = input.nextInt();
+
+        if (nA != nB) {
+
+            System.out.printf("\nValor de A (antes da troca) = %d.", nA);
+            System.out.printf("\nValor de B (antes da troca) = %d.\n", nB);
+
+            int buffer = nA;
+            nA = nB;
+            nB = buffer;
+
+            System.out.printf("\nValor de A (depois da troca) = %d.", nA);
+            System.out.printf("\nValor de B (depois da troca) = %d.", nB);
+
+        } else {
+
+            System.out.print("\nOs números A e B são iguais.");
+        }
+
+
+
+        input.close();
+    }
+
+    public static void questaoc2(){
+
+    }
+
+    public static void questaoc3(){
+
+    }
+
+    public static void questaoc4(){
+
+    }
+
+    public static void questaoc5(){
+
+    }
+
+    public static void questaoc6(){
+
+    }
+
+    public static void questaoc7(){
+
+    }
+
+    public static void questaoc8(){
+
+    }
+
+    public static void questaoc9(){
+
+    }
+
+    public static void questaoc10(){
+
+    }
+
+    public static void questaoc11(){
+
+    }
+
+    public static void questaoc12(){
+
+    }
+
     public static void main(String[] args) {
-        questao10();
+        questaoc1();
     }
 }
