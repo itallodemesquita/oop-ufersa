@@ -108,7 +108,7 @@ public class lista1 {
         float litros = distancia / 12;
 
         System.out.printf("\nVelocidade média: %.2f km/h\n", velocidade);
-        System.out.printf("Tempo de viagem: %.2f horas.\n", tempo);
+        System.out.printf("tempo de viagem: %.2f horas.\n", tempo);
         System.out.printf("Distância total: %.2f km.\n", distancia);
         System.out.printf("Combustível gasto: %.2f L. \n", litros);
 
@@ -119,9 +119,9 @@ public class lista1 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Qual é a temperatura atual (em ºC)? ");
-        float temp = input.nextFloat();
+        float tempo = input.nextFloat();
 
-        System.out.printf("\nA temperatura em Fahrenheit é de %.2f ºF.", ((9 * temp + 160) / 5));
+        System.out.printf("\nA temperatura em Fahrenheit é de %.2f ºF.", ((9 * tempo + 160) / 5));
 
         input.close();
 
@@ -131,9 +131,9 @@ public class lista1 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Qual é a temperatura atual (em ºF)? ");
-        float temp = input.nextFloat();
+        float tempo = input.nextFloat();
 
-        System.out.printf("\nA temperatura em Celsius é de %.2f ºC.", ((temp - 32) * 5 / 9));
+        System.out.printf("\nA temperatura em Celsius é de %.2f ºC.", ((tempo - 32) * 5 / 9));
 
         input.close();
         
@@ -241,46 +241,278 @@ public class lista1 {
     }
 
     public static void questaoc3(){
+        Scanner input = new Scanner(System.in);
+        int buffer;
 
+        System.out.print("\nDigite um número inteiro 1: ");
+        int num1 = input.nextInt();
+
+        System.out.print("\nDigite um número inteiro 2: ");
+        int num2 = input.nextInt();
+
+        System.out.print("\nDigite um número inteiro 3: ");
+        int num3 = input.nextInt();
+
+        System.out.print("\nDigite um número inteiro 4: ");
+        int num4 = input.nextInt();
+
+        System.out.print("\nDigite um número inteiro 5: ");
+        int num5 = input.nextInt();
+
+        // Condições para ordenar o maior número (posição 5)
+        if (num1 > num2) { buffer = num1; num1 = num2; num2 = buffer; }
+        if (num2 > num3) { buffer = num2; num2 = num3; num3 = buffer; }
+        if (num3 > num4) { buffer = num3; num3 = num4; num4 = buffer; }
+        if (num4 > num5) { buffer = num4; num4 = num5; num5 = buffer; }
+
+        // Condições para armazenar o segundo maior (posição 4)
+        if (num1 > num2) { buffer = num1; num1 = num2; num2 = buffer; }
+        if (num2 > num3) { buffer = num2; num2 = num3; num3 = buffer; }
+        if (num3 > num4) { buffer = num3; num3 = num4; num4 = buffer; }
+
+        // Condições para armazenar o terceiro maior (posição 3)
+        if (num1 > num2) { buffer = num1; num1 = num2; num2 = buffer; }
+        if (num2 > num3) { buffer = num2; num2 = num3; num3 = buffer; }
+
+        // Condição para a posição 2
+        if (num1 > num2) { buffer = num1; num1 = num2; num2 = buffer; }
+
+        System.out.printf("Ordem crescente: %d, %d, %d, %d, %d", num1, num2, num3, num4, num5);
+        System.out.printf("\nOrdem decrescente: %d, %d, %d, %d, %d", num5, num4, num3, num2, num1);
+
+        input.close();
     }
 
     public static void questaoc4(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("\nDigite um número inteiro 1: ");
+        int num1 = input.nextInt();
+        System.out.print("\nDigite um número inteiro 2: ");
+        int num2 = input.nextInt();
+
+        if (num1 < num2) {
+            System.out.printf("\nA diferença do maior número pro maior é de %d.", (num2 - num1));
+        } else {
+            System.out.printf("\nA diferença do maior número pro maior é de %d.", (num1 - num2));
+        }
+
+        input.close();
     }
 
     public static void questaoc5(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("\nDigite a nota 1: ");
+        float nota1 = input.nextFloat();
+
+        System.out.print("Digite a nota 2: ");
+        float nota2 = input.nextFloat();
+
+        System.out.print("Digite a nota 3: ");
+        float nota3 = input.nextFloat();
+
+        System.out.print("Digite a nota 4: ");
+        float nota4 = input.nextFloat();
+
+        float media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        if (media >= 7) {
+
+            System.out.printf("\nMédia: %.2f (Aprovado).", media);
+
+        } else {
+
+            System.out.printf("\nMédia: %.2f (Recuperação).", media);
+            System.out.print("\nDigite a nota de recuperação: ");
+            float notafinal = input.nextFloat();
+
+            float mediafinal = (media + notafinal) / 2;
+
+            if (mediafinal >= 7) {
+                System.out.printf("\nMédia final: %.2f (Aprovado).", mediafinal);
+            } else {
+                System.out.printf("\nMédia final: %.2f (Reprovado).", mediafinal);
+            }
+        }
+
+        input.close();
     }
 
     public static void questaoc6(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("\nDigite o primeiro número: ");
+        float num1 = input.nextFloat();
+
+        System.out.print("Digite o segundo número: ");
+        float num2 = input.nextFloat();
+
+        if (num1 == num2) {
+
+            System.out.print("\nOs dois números são iguais.");
+
+        } else if (num1 > num2) {
+
+            System.out.printf("\nMaior número: %.2f", num1);
+            System.out.printf("\nMenor número: %.2f", num2);
+
+        } else {
+            System.out.printf("\nMaior número: %.2f", num2);
+            System.out.printf("\nMenor número: %.2f", num1);
+        }
+
+        input.close();
     }
 
     public static void questaoc7(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("\nDigite um número inteiro: ");
+        int num = input.nextInt();
+
+        if (num >= 0 && num <= 9) {
+            System.out.print("O valor é válido.");
+        } else {
+            System.out.print("Valor inválido");
+        }
+
+        input.close();
     }
 
     public static void questaoc8(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("\nDigite o código: ");
+        int code = input.nextInt();
+
+        if ((code == 1) || (code == 2) || (code == 3)) {
+            System.out.print("Código válido!");
+
+            switch (code) {
+                case 1:
+                    System.out.print("\nCódigo: um");
+                    break;
+                case 2:
+                    System.out.print("\nCódigo: dois");
+                    break;
+                case 3:
+                    System.out.print("\nCódigo: três");
+                    break;
+                
+            }
+        } else {
+            System.out.println("O código é inválido!");
+        }
+
+        input.close();
     }
 
     public static void questaoc9(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("\nDigite a medida do lado A: ");
+        float ladoA = input.nextFloat();
+
+        System.out.print("Digite a medida do lado B: ");
+        float ladoB = input.nextFloat();
+
+        System.out.print("Digite a medida do lado C: ");
+        float ladoC = input.nextFloat();
+
+        if ((ladoA < (ladoB + ladoC) && ladoB < (ladoC + ladoA) && ladoC < (ladoA + ladoB))) {
+            System.out.println("\nMedidas válidas!");
+
+            if ((ladoA == ladoB) && ladoB == ladoC) {
+                System.out.println("O triângulo é equilátero!");
+            } else if ((ladoA == ladoB) || (ladoB == ladoC) || (ladoA == ladoC)) {
+                System.out.println("O triângulo é isóceles!");
+            } else {
+                System.out.println("O triângulo é escaleno!");
+            }
+        } else {
+            System.out.println("Os lados informados não formam um triângulo!");
+        }
+
+        input.close();
     }
 
     public static void questaoc10(){
+        Scanner input = new Scanner(System.in);
+        int menor = 99999;
+        int maior = 0;
 
+        System.out.print("Digite o número A: ");
+        int a = input.nextInt();
+        if (a < menor) {
+            menor = a;
+        }
+        if (a > maior) {
+            maior = a;
+        }
+
+        System.out.print("Digite o número B: ");
+        int b = input.nextInt();
+        if (b < menor) {
+            menor = b;
+        }
+        if (b > maior) {
+            maior = b;
+        }
+
+        System.out.print("Digite o número C: ");
+        int c = input.nextInt();
+        if (c < menor) {
+            menor = b;
+        }
+        if (c > maior) {
+            maior = c;
+        }
+
+        System.out.printf("\nMenor * maior = %d", (menor * maior));
+        System.out.printf("\nmaior / menor = %.2f", (float) maior / menor);
+
+
+        input.close();
     }
 
     public static void questaoc11(){
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("Digite um número: ");
+        int num = input.nextInt();
+
+        if (num >= 0) {
+            System.out.printf("%d é um número positivo.", num);
+        } else {
+            System.out.printf("%d é um número negativo.", num);
+        }
+
+        input.close();
     }
 
     public static void questaoc12(){
+        Scanner input = new Scanner(System.in);
 
+        int a = 0;
+        int b = 0;
+
+        System.out.print("Digite um número: ");
+        int num = input.nextInt();
+
+        if (num >= 0) {
+            a = num;
+
+        } else {
+            b = num;
+        }
+
+        System.out.printf("Valor de A = %d\nValor de B = %d", a, b);
+
+        input.close();
     }
 
     public static void main(String[] args) {
-        questaoc1();
+        questaoc10();
     }
 }
