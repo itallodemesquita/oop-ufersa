@@ -1,13 +1,5 @@
 import java.util.Scanner;
 
-/* Quick copy and paste
-
-    Scanner input = new Scanner(System.in);
-
-    input.close();
-
- */
-
 public class lista1 {
 
     public static void questao1(){
@@ -513,6 +505,86 @@ public class lista1 {
     }
 
     public static void main(String[] args) {
-        questaoc10();
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("""
+                Questões feitas em sala.
+                Escola a questão que quer ver de 1 a 10 (entrada, processamento e saída) e da 11 a 22 (condicionais):\t""");
+        int questao = input.nextInt();
+
+        switch (questao) {
+            case 1:
+                questao1();
+                break;
+            case 2:
+                questao2();
+                break;
+            case 3:
+                questao3();
+                break;
+            case 4:
+                questao4();
+                break;
+            case 5:
+                questao5();
+                break;
+            case 6:
+                questao6();
+                break;
+            case 7:
+                questao7();
+                break;
+            case 8:
+                questao8();
+                break;
+            case 9:
+                questao9();
+                break;
+            case 10:
+                questao10();
+                break;
+            case 11:
+                questaoc1();
+                break;
+            case 12:
+                questaoc2();
+                break;
+            case 13:
+                questaoc3();
+                break;
+            case 14:
+                questaoc4();
+                break;
+            case 15:
+                questaoc5();
+                break;
+            case 16:
+                questaoc6();
+                break;
+            case 17:
+                questaoc7();
+                break;
+            case 18:
+                questaoc8();
+                break;
+            case 19:
+                questaoc9();
+                break;
+            case 20:
+                questaoc10();
+                break;
+            case 21:
+                questaoc11();
+                break;
+            case 22:
+                questaoc12();
+                break;
+            default:
+                System.out.println("Questão inválida!");
+        }
+
+        input.close();
+
     }
 }
