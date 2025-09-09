@@ -67,7 +67,7 @@ Scanner input = new Scanner(System.in);
 
 > **Attention:** After a `nextInt()` or `nextDouble()`, use a extra `input.nextLine();` to consume the line break before read a `String` with `nextLine()`.
 
-**Passo 4: Close the Scanner**
+**Step 4: Close the Scanner**
 ```java
 input.close();
 ```
@@ -140,7 +140,7 @@ System.out.println("Status: " + status);
 | Operator | Name | Example | Meaning |
 | :--- | :--- | :--- | :--- |
 | **`&&`** | AND | `age >= 18 && ofAge` | Both conditions must be `true`. |
-| **`||`** | OR | `itsHoliday \|\| eFimDeSemana` | At least one condition must be `true`.|
+| **`\|\|`** | OR | `itsHoliday \|\| eFimDeSemana` | At least one condition must be `true`.|
 | **`!`** | NOT| `!isLoggedin` | Invert the boolean value. |
 
 > **Tip:** To compare the contents of **strings**, always use the `.equals()` method, never the operator `==`.
