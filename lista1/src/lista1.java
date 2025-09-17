@@ -309,7 +309,7 @@ public class lista1 {
 
         float media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-        if (media >= 7) {
+        if (media >= 6) {
 
             System.out.printf("\nMédia: %.2f (Aprovado).", media);
 
@@ -321,7 +321,7 @@ public class lista1 {
 
             float mediafinal = (media + notafinal) / 2;
 
-            if (mediafinal >= 7) {
+            if (mediafinal >= 6) {
                 System.out.printf("\nMédia final: %.2f (Aprovado).", mediafinal);
             } else {
                 System.out.printf("\nMédia final: %.2f (Reprovado).", mediafinal);
