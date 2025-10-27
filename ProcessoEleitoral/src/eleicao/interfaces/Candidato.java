@@ -1,6 +1,6 @@
 package eleicao.interfaces;
 
-public class Candidato {
+public interface Candidato {
 
     int getNumeroCandidato();
 
