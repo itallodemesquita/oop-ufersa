@@ -24,10 +24,22 @@ public abstract class Politico implements Candidato {
     }
 
     public void receberVoto() {
+        this.totalVotos++;
     }
 
     public int getTotalVotos() {
-        return 
+        return this.totalVotos;
     }
+
+    @Override
+    public void exibirDados() {
+        System.out.printf("Nome: %s%n", this.nome);
+        System.out.printf("Número: %d%n", this.numeroCandidato);
+        System.out.printf("Partido: %s (%s)%n", this.partido.getNome(), this.partido.getSigla());
+        System.out.printf("Total de Votos: %d%n", this.totalVotos);
+        System.out.println("Cargo: " + getCargo());
+    }
+
+    public abstract String getCargo();
     
 }

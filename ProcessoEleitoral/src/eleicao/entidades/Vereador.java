@@ -2,12 +2,12 @@ package eleicao.entidades;
 
 public class Vereador extends Politico {
 
-    public Vereador (String nome, Partido partido, int numeroCandidato, int totalVotos) {
-        super(nome, partido, numeroCandidato, totalVotos);
+    public Vereador (String nome, Partido partido, int numeroCandidato) {
+        super(nome, partido, numeroCandidato);
     }
 
-    public abstract String getCargo() {
-        return ("Vereador");
+    public String getCargo() {
+        return "Vereador";
     }
     
 
